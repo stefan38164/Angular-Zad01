@@ -1,0 +1,248 @@
+<div
+  class="min-vw-100 min-vh-100 bg-success d-flex justify-content-center align-items-center px-5 py-5"
+>
+  <div
+    class="w-100 mx-auto shadow-lg text-dark position-relative overflow-hidden bg-success"
+    style="max-width: 350px; border-radius: 30px"
+  >
+    <h1 class="text-center text-white py-3 fs-4 fw-bold">Calculator</h1>
+
+    <!-- Calculator screen -->
+
+    <div
+      class="bg-dark text-end h-40 w-100"
+      style="background-image: linear-gradient(to bottom, #444444, #555555)"
+    >
+      <div class="w-100 py-1 px-1 fs-5 text-white fw-light">{{ funcT }}</div>
+
+      <!-- number screen -->
+      <div class="w-100 py-1 px-1 fs-2 text-white fw-light">
+        {{ calValue | number }}
+      </div>
+    </div>
+
+    <!-- calculator buttons  -->
+
+    <div
+      class="w-100"
+      style="background-image: linear-gradient(to bottom, #dc2626, #7f1d1d)"
+    >
+      <!-- first button row -->
+      <div class="d-flex w-100">
+        <!-- clear button -->
+
+        <div class="w-50 border-end border-bottom border border-secondary">
+          <button
+            type="button"
+            class="btn btn-danger w-100 h-16 outline-none fs-5 fw-light text-white"
+            (click)="onClickValue('c', 'function')"
+          >
+            C
+          </button>
+        </div>
+
+        <!-- percentage button -->
+        <div class="w-25 border-end border-bottom border border-secondary">
+          <button
+            type="button"
+            class="btn btn-danger w-100 h-16 outline-none fs-5 fw-light text-white"
+            (click)="onClickValue('%', 'function')"
+          >
+           %
+          </button>
+        </div>
+        <!-- division button -->
+        <div class="w-25 border-end border-bottom border border-secondary">
+          <button
+            type="button"
+            class="btn btn-danger w-100 h-16 outline-none fs-5 fw-light text-white"
+            (click)="onClickValue('/', 'function')"
+          >
+            /
+          </button>
+        </div>
+      </div>
+      <!-- end of first button row -->
+      <!-- start of second row button -->
+      <div class="d-flex w-100">
+        <!-- number 7 button -->
+
+        <div class="w-25 border border-end border-bottom border-secondary">
+          <button
+            type="button"
+            class="btn btn-danger w-100 h-16 outline-none fs-5 fw-light text-white"
+            (click)="onClickValue('7', 'number')"
+          >
+            7
+          </button>
+        </div>
+
+        <!-- num 8 button -->
+        <div class="w-25 border-end border-bottom border border-secondary">
+          <button
+            type="button"
+            class="btn btn-danger w-100 h-16 outline-none fs-5 fw-light text-white"
+            (click)="onClickValue('8', 'number')"
+          >
+            8
+          </button>
+        </div>
+        <!-- num 9 button -->
+        <div class="w-25 border-end border-bottom border border-secondary">
+          <button
+            type="button"
+            class="btn btn-danger w-100 h-16 outline-none fs-5 fw-light text-white"
+            (click)="onClickValue('9', 'number')"
+          >
+            9
+          </button>
+        </div>
+
+        <!-- multiplivation button -->
+        <div class="w-25 border-end border-bottom border border-secondary">
+          <button
+            type="button"
+            class="btn btn-danger w-100 h-16 outline-none fs-5 fw-light text-white"
+            (click)="onClickValue('*', 'function')"
+          >
+            *
+          </button>
+        </div>
+      </div>
+      <!-- end of second row -->
+      <!-- start of third row -->
+      <div class="d-flex w-100">
+        <!-- number 4 button -->
+
+        <div class="w-25 border border-end border-bottom border-secondary">
+          <button
+            type="button"
+            class="btn btn-danger w-100 h-16 outline-none fs-5 fw-light text-white"
+            (click)="onClickValue('4', 'number')"
+          >
+            4
+          </button>
+        </div>
+
+        <!-- num 5 button -->
+        <div class="w-25 border-end border-bottom border border-secondary">
+          <button
+            type="button"
+            class="btn btn-danger w-100 h-16 outline-none fs-5 fw-light text-white"
+            (click)="onClickValue('5', 'number')"
+          >
+            5
+          </button>
+        </div>
+        <!-- num 6 button -->
+        <div class="w-25 border-end border-bottom border border-secondary">
+          <button
+            type="button"
+            class="btn btn-danger w-100 h-16 outline-none fs-5 fw-light text-white"
+            (click)="onClickValue('6', 'number')"
+          >
+            6
+          </button>
+        </div>
+
+        <!-- substraction button -->
+        <div class="w-25 border-end border-bottom border border-secondary">
+          <button
+            type="button"
+            class="btn btn-danger w-100 h-16 outline-none fs-5 fw-light text-white"
+            (click)="onClickValue('-', 'function')"
+          >
+            -
+          </button>
+        </div>
+      </div>
+
+      <!-- end of third row -->
+      <!-- start of fourth row -->
+      <div class="d-flex w-100">
+        <!-- number 1 button -->
+
+        <div class="w-25 border border-end border-bottom border-secondary">
+          <button
+            type="button"
+            class="btn btn-danger w-100 h-16 outline-none fs-5 fw-light text-white"
+            (click)="onClickValue('1', 'number')"
+          >
+            1
+          </button>
+        </div>
+
+        <!-- num 2 button -->
+        <div class="w-25 border-end border-bottom border border-secondary">
+          <button
+            type="button"
+            class="btn btn-danger w-100 h-16 outline-none fs-5 fw-light text-white"
+            (click)="onClickValue('2', 'number')"
+          >
+            2
+          </button>
+        </div>
+        <!-- num 3 button -->
+        <div class="w-25 border-end border-bottom border border-secondary">
+          <button
+            type="button"
+            class="btn btn-danger w-100 h-16 outline-none fs-5 fw-light text-white"
+            (click)="onClickValue('3', 'number')"
+          >
+            3
+          </button>
+        </div>
+
+        <!-- addition button -->
+        <div class="w-25 border-end border-bottom border border-secondary">
+          <button
+            type="button"
+            class="btn btn-danger w-100 h-16 outline-none fs-5 fw-light text-white"
+            (click)="onClickValue('+', 'function')"
+          >
+            +
+          </button>
+        </div>
+      </div>
+      <!-- end of fourth button -->
+      <!-- start of fifth button -->
+      <div class="d-flex w-100">
+        <!-- zero button -->
+
+        <div class="w-25 border border-end border-bottom border-secondary">
+          <button
+            type="button"
+            class="btn btn-danger w-100 h-16 outline-none fs-5 fw-light text-white"
+            (click)="onClickValue('0', 'number')"
+          >
+            0
+          </button>
+        </div>
+
+        <!-- decimal button -->
+        <div class="w-25 border-end border-bottom border border-secondary">
+          <button
+            type="button"
+            class="btn btn-danger w-100 h-16 outline-none fs-5 fw-light text-white"
+            (click)="onClickValue('.', 'number')"
+          >
+            .
+          </button>
+        </div>
+        <!-- eaqual button -->
+        <div class="w-50 border-end border-bottom border border-secondary">
+          <button
+            type="button"
+            class="btn btn-danger w-100 h-16 outline-none fs-5 fw-light text-white"
+            (click)="onClickValue('=', 'function')"
+          >
+            =
+          </button>
+        </div>
+      </div>
+      <!-- end of fifth row  -->
+    </div>
+    <!-- end of calculator button area -->
+  </div>
+</div>
+
