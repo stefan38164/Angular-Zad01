@@ -1,0 +1,29 @@
+.calculator {
+    max-width: 350px; 
+    border-radius: 30px;
+}
+
+.calScreen {
+    background-image: linear-gradient(to bottom, #444444, #555555); 
+    min-height:100px;
+}
+
+.calButtons {
+    background-image: linear-gradient(to bottom, #dc2626, #7f1d1d);
+}
+.container {
+    display: flex;
+ 
+    justify-content: space-between;
+
+  }
+  
+  .container input {
+    width: 8ch;
+    
+    margin-left: 2px;
+    border: none;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  
