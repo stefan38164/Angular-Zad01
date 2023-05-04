@@ -1,0 +1,61 @@
+.calculator {
+    max-width: 350px; 
+    border-radius: 30px;
+}
+
+.calScreen {
+    background-image: linear-gradient(to bottom, #444444, #555555); 
+    min-height:100px;
+}
+
+.calButtons {
+    background-image: linear-gradient(to bottom, #dc2626, #7f1d1d);
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+
+  }
+  
+  .container input {
+    width: 8ch;
+    
+    margin-left: 2px;
+    border: none;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .calButtons {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    padding: 5px;
+    max-width: 400px; 
+    margin: 0 auto; 
+  }
+  
+  .calButton {
+    font-size: 1.5rem;
+    background-color: #ccc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .calButton:hover {
+    background-color: #aaa;
+  }
+  
+  .function {
+    background-color: #f00;
+    color: #fff;
+  }
+  
+  .number {
+    background-color: #ddd;
+  }
+  .calButton-span {
+    grid-column: span 2;
+  }
