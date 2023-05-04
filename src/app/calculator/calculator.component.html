@@ -3,44 +3,32 @@
 >
   <div
     class="w-100 mx-auto shadow-lg text-dark position-relative overflow-hidden bg-success calculator"
-    
   >
     <h1 class="text-center text-white py-3 fs-4 fw-bold">Calculator</h1>
 
     <!-- Calculator screen -->
 
-    <div
-      class="bg-danger text-end h-40 w-100 calScreen"
-    
-    >
-       <div > </div>
-      <div class="w-100 py-1 px-1 fs-5  text-white fw-light"> {{ funcT }}</div>
+    <div class="bg-danger text-end h-40 w-100 calScreen">
+      <div class="w-100 py-1 px-1 fs-5 text-white fw-light">{{ funcT }}</div>
 
-      <!-- number screen -->
       <div class="w-100 py-1 px-1 fs-2 h-40 text-white fw-light container">
-        <input type="text" [(ngModel)] = "inputValue">
+        <input type="text"   pattern="^-?(?:\d+(?:\.\d*)?|\.\d+)$" [(ngModel)]="inputValue" />
         {{ calValue | number }} <!-- number pipe odvaja zarezom hiljade i zaokruzuje na 3 decimale -->
       </div>
     </div>
+    <!-- end of Calculator screen -->
 
-    <!-- calculator buttons  -->
-    <div class="w-100 calButtons">
-      <div *ngFor="let row of buttonRows" class="d-flex w-100">
-        <div
-          *ngFor="let button of row"
-          class="w-{{ button.width }} border border-secondary"
-        >
-          <button
-            type="button"
-            class="btn btn-danger w-100 h-16 outline-none fs-5 fw-light text-white"
-            (click)="onClickValue(button.value, button.type)"
-          >
-            {{ button.label }}
-          </button>
-        </div>
-      </div>
-    </div>   
+    <!--  calculator button area -->
+    <div class="calButtons">
+      <button
+        *ngFor="let button of buttons"
+        class="calButton {{button.type}} 
+        {{ button.value === 'c' || button.value === '0' ? 'calButton-span' : ''}}"
+        (click)="onClickValue(button.value, button.type)"
+      >
+        {{ button.value }}
+      </button>
+    </div>
     <!-- end of calculator button area -->
   </div>
 </div>
-
